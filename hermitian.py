@@ -21,10 +21,3 @@ def tensor(matrix1,matrix2):
 		for j in range(m):
 			li.append(srm_matrix(matrix2,matrix1[i,j]))
 	return np.array(li)		
-
-print("---------------------Hermitian Matrices/Unitary Matrices/Tensor product---------------------")
-m1=init_matrix(int(input("Enter m:")),int(input("Enter n:")))
-hermitian(np.matrix(m1))
-m2=init_matrix(int(input("Enter m:")),int(input("Enter n:")))
-unitary(np.matrix(m2))
-print("Tensor product=",tensor(m1,m2))
