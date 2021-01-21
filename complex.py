@@ -1,5 +1,6 @@
 import math
 import matplotlib.pyplot as plt
+
 class compleX:
 	def __init__(self, r, i):
 		self.real = r
@@ -33,7 +34,6 @@ class compleX:
 		img_quo = (num2.real * num1.imaginary- num1.real* num2.imaginary)/(num2.real**2 + num2.imaginary**2)
 		return compleX(real_quo, img_quo)
 
-	
 class polar(compleX):	
 	def __init__(self, r, i):
 		num=compleX(r, i)
@@ -68,11 +68,9 @@ class polar(compleX):
 		img = num.theta*power
 		return (real, img)
 
-
 def conjugate(num):
 	num.imaginary = num.imaginary * -1
 	return compleX(num.real, num.imaginary)						
-
 
 def root(num, root):
 	img=[]
@@ -82,7 +80,6 @@ def root(num, root):
 		img.append((real, ans))
 	return img			
 			
-
 def plot(num):
 	plt.ylabel("imaginary")
 	plt.xlabel("real")
